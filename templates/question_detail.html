@@ -1,0 +1,19 @@
+<!-- question_detail.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Detail</title>
+</head>
+<body>
+    <h1>{{ question.Question_Title }}</h1>
+    <p>Option 1: {{ question.Option_1 }}</p>
+    <p>Option 2: {{ question.Option_2 }}</p>
+    <p>Option 3: {{ question.Option_3 }}</p>
+    <p>Option 4: {{ question.Option_4 }}</p>
+    <p>Answer: {{ question.Answer }}</p>
+    
+    <!-- Render Description as plain text -->
+    <div>{{ question.Description }}</div>
+</body>
+</html>

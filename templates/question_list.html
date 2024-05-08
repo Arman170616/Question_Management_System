@@ -1,0 +1,52 @@
+<!-- question_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question List</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question List</h1>
+    <a href="{% url 'admin:index' %}">Go to Admin Panel</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Option 1</th>
+                <th>Option 2</th>
+                <th>Option 3</th>
+                <th>Option 4</th>
+                <th>Answer</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for question in questions %}
+            <tr>
+                <td>{{ question.Question_Title }}</td>
+                <td>{{ question.Option_1 }}</td>
+                <td>{{ question.Option_2 }}</td>
+                <td>{{ question.Option_3 }}</td>
+                <td>{{ question.Option_4 }}</td>
+                <td>{{ question.Answer }}</td>
+                <td>{{ question.Description }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
