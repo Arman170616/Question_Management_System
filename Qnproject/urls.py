@@ -21,5 +21,5 @@ from qnapp.views import question_list_view,question_detail_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', question_list_view, name='question_list'),
-    path('question/<int:question_id>/', question_detail_view, name='question_detail'),
+    path('q/<int:question_id>/', question_detail_view, name='question_detail'),
 ]
